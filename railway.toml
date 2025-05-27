@@ -1,11 +1,14 @@
-[build]
-  builder = "nixpacks"
+[phases.setup]
+nixPkgs = ['nodejs-18', 'npm-9']
 
-[deploy]
-  startCommand = "npm run start"
-  healthcheckPath = "/api/auth/current"
-  healthcheckTimeout = 300
-  restartPolicyType = "always"
+[phases.install]
+cmds = ['npm ci']
 
-[environment]
-  NODE_ENV = "production"
+[phases.build]
+cmds = ['npm run build']
+
+[start]
+cmd = 'npm start'
+
+[variables]
+NODE_ENV = 'production'
