@@ -1,0 +1,48 @@
+# Dependências
+node_modules/
+.pnp/
+.pnp.js
+
+# Arquivos de build
+dist/
+build/
+.next/
+out/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos grandes e temporários
+.local/
+uploads/
+attached_assets/
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de cache
+.cache/
+.temp/
+
+server/public
+vite.config.ts.*

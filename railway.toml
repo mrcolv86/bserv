@@ -1,0 +1,11 @@
+[build]
+  builder = "nixpacks"
+
+[deploy]
+  startCommand = "npm run start"
+  healthcheckPath = "/api/auth/current"
+  healthcheckTimeout = 300
+  restartPolicyType = "always"
+
+[environment]
+  NODE_ENV = "production"
