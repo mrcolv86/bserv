@@ -85,6 +85,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
+  // Health check endpoint for Railway deployment - simple and reliable
+  app.get('/api/health', (req, res) => {
+    res.status(200).json({ 
+      status: 'ok',
+      service: 'BierServ',
+      timestamp: new Date().toISOString()
+    });
+  });
+  
   // Authentication Routes
   app.post('/api/auth/login', (req, res, next) => {
     passport.authenticate('local', (err: any, user: any, info: any) => {
